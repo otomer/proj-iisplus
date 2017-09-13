@@ -8,7 +8,8 @@ var nav = [
   { Text: 'Express', Link: "/Express" }
 
 ];
-var usersRouter = require("./src/routes/userRoutes")(nav);
+
+var usersRouter = require("src/routes/userRoutes")(nav);
 //app.use("/Users", usersRouter);
 
 //Middleware - used by express first before anything else
