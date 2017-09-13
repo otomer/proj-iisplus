@@ -1,6 +1,6 @@
 var express = require("express");
 var usersRouter = express.Router();
-var API = require("./public/js/api");
+var API = require("../../public/js/api");
 
 var router = function () {
 

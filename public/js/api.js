@@ -1,4 +1,4 @@
-var $ = $ || require("jquery")(require("jsdom").jsdom().defaultView);
+//var $ = $ || require("jquery")(require("jsdom").jsdom().defaultView);
 
 var API = {
     dbInfo: {
@@ -55,4 +55,4 @@ var API = {
     }
 
 }
-module.exports = API;
+module.exports = {};
