@@ -5,7 +5,7 @@ var API = {
         dbuser: "admin",
         dbpassword: "admin",
         url: "mongodb://<dbuser>:<dbpassword>@ds157248.mlab.com:57248/extdb",
-        getConnectionString: function() {
+        getConnectionString: function () {
             return this.url.replace("<dbuser>", this.dbuser).replace("<dbpassword>", this.dbpassword);
         }
     },

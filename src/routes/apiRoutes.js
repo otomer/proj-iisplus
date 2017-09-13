@@ -65,7 +65,9 @@ var router = function (nav) {
                 ],
                 nav: nav
             });
-        })
+        }),
+
+        
 
     return apiRouter;
 }
