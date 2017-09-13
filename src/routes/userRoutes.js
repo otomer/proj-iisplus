@@ -41,7 +41,7 @@ var router = function () {
                                 },
                                 { upsert: true },
                                 function (err, results) {
-                                    response.send(results);
+                                    response.send(item);
                                     db.close();
                                 })
 
@@ -79,7 +79,8 @@ var router = function () {
                                 },
                                 { upsert: true },
                                 function (err, results) {
-                                    response.send(results);
+                                   
+                                    response.send(item);
                                     db.close();
                                 })
 
