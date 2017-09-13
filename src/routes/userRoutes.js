@@ -1,8 +1,8 @@
 var express = require("express");
 var usersRouter = express.Router();
-var API = require("../../public/js/api");
+//var API = require("../../public/js/api");
 
-var router = function (nav) {
+var router = function () {
 
     usersRouter.route("/").get(function (request, response) {
         response.send("OK");
