@@ -11,31 +11,24 @@ var router = function (nav) {
             read: false
         }
     ]
-
-    usersRouter.route("/:id").get(function (request, response) {
-        var id = request.params.id;
-        response.render('userView', {
-            title: "Users",
-            users: users[id],
-            nav: nav
-        });
-    })
+ 
 
     usersRouter.route("/").get(function (request, response) {
-        API.collections.users.get()
-            .done(function (users) {
-                if (users) {
-                    response.render('usersListView', {
-                        title: "Users",
-                        users: users,
-                        nav: nav
-                    });
-                }
-                else { return null; }
-            })
-            .fail(function () {
-                return null;
-            });
+        response.send('Users');
+        // API.collections.users.get()
+        //     .done(function (users) {
+        //         if (users) {
+        //             response.render('usersListView', {
+        //                 title: "Users",
+        //                 users: users,
+        //                 nav: nav
+        //             });
+        //         }
+        //         else { return null; }
+        //     })
+        //     .fail(function () {
+        //         return null;
+        //     });
     })
 
     return usersRouter;
