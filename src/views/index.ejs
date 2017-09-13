@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Storystrap Template</title>
+  <meta name="generator" content="Bootply" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,400italic,500,700,500italic,100,100italic,300,700italic,900,900italic"
+    rel="stylesheet" type="text/css" />
+  <!--bower:css-->
+  <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+  <!--endbower-->
+  <!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+  <!--inject:css-->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/index/another.css">
+  <!--endinject-->
+</head>
+
+<body class="hour-<%= period.hour %>">
+
+  <div class="container">
+    <h1>
+      Hello
+      <%= period.text %>
+    </h1>
+
+<div class="form-wrap">
+		<div class="tabs">
+			<h3 class="signup-tab"><a class="active" href="#signup-tab-content">Sign Up</a></h3>
+			<h3 class="login-tab"><a href="#login-tab-content">Login</a></h3>
+		</div><!--.tabs-->
+
+		<div class="tabs-content">
+			<div id="signup-tab-content" class="active">
+				<form class="signup-form" action="/auth/signup" method="post">
+					<input type="text" class="input" id="user_name" autocomplete="off" placeholder="Username">
+					<input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
+					<input type="submit" class="button" value="Sign Up">
+				</form><!--.login-form-->
+				<div class="help-text">
+					<p>By signing up, you agree to our</p>
+					<p><a href="#">Terms of service</a></p>
+				</div><!--.help-text-->
+			</div><!--.signup-tab-content-->
+
+			<div id="login-tab-content">
+				<form class="login-form" action="" method="post">
+					<input type="text" class="input" id="user_login" autocomplete="off" placeholder="Email or Username">
+					<input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
+					<input type="checkbox" class="checkbox" id="remember_me">
+					<label for="remember_me">Remember me</label>
+
+					<input type="submit" class="button" value="Login">
+				</form><!--.login-form-->
+				<div class="help-text">
+					<p><a href="#">Forget your password?</a></p>
+				</div><!--.help-text-->
+			</div><!--.login-tab-content-->
+		</div><!--.tabs-content-->
+	</div><!--.form-wrap-->
+
+
+
+<!-- script references -->
+<!--bower:js-->
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+<!--endbower-->
+<!--inject:js-->
+<script src="/js/api.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/bootstrap-table.min.js"></script>
+<script src="/js/index/index.js"></script>
+<!--endinject-->
+
+</body>
+
+</html>

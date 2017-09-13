@@ -1,0 +1,33 @@
+{
+  "name": "myapp",
+  "description": "a really cool app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "4.1.1"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "ejs": "^2.5.5",
+    "fs": "0.0.1-security",
+    "guid": "0.0.12",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^3.0.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-jscs": "^4.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-nodemon": "^2.2.1",
+    "jquery": "^3.1.1",
+    "jsdom": "^9.9.1",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "mongodb": "^2.2.19",
+    "shortid": "^2.2.6",
+    "underscore": "^1.8.3",
+    "wiredep": "^4.0.0"
+  }
+}
