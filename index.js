@@ -18,8 +18,7 @@ app.use(express.static('public'));
 app.use(express.static('src/views'));
 
 app.get('/', (request, response) => {
-  //response.send('Hello from Express!');
-  response.send(typeof usersRouter);
+  response.send('Hello from Express!');
 });
 
 app.listen(port, (err) => {

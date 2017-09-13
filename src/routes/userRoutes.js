@@ -1,11 +1,11 @@
 var express = require("express");
 var usersRouter = express.Router();
-//var API = require("../../public/js/api");
+var API = require("../../public/js/api");
 
 var router = function () {
 
     usersRouter.route("/").get(function (request, response) {
-        response.send("OK");
+        response.send(typeof API);
         // API.collections.users.get()
         //     .done(function (users) {
         //         if (users) {
