@@ -55,4 +55,4 @@ var API = {
     }
 
 }
-module.exports = {};
+module.exports = API;
