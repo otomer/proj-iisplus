@@ -3,32 +3,22 @@ var usersRouter = express.Router();
 var API = require("../../public/js/api");
 
 var router = function (nav) {
-    var users = [
-        {
-            title: "A",
-            genre: "B",
-            author: "C",
-            read: false
-        }
-    ]
- 
 
     usersRouter.route("/").get(function (request, response) {
-        response.send('Users');
-        // API.collections.users.get()
-        //     .done(function (users) {
-        //         if (users) {
-        //             response.render('usersListView', {
-        //                 title: "Users",
-        //                 users: users,
-        //                 nav: nav
-        //             });
-        //         }
-        //         else { return null; }
-        //     })
-        //     .fail(function () {
-        //         return null;
-        //     });
+        API.collections.users.get()
+            .done(function (users) {
+                if (users) {
+                    response.send(users[0]);
+                } else {
+                    console.log("No users found");
+                    return null;
+                }
+            })
+            .fail(function (e) {
+                console.log("Failed to get users");
+                response.send(e);
+                return null;
+            });
     })
 
     return usersRouter;

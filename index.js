@@ -20,10 +20,6 @@ app.get('/', (request, response) => {
   response.send('Hello from Express!');
 });
 
-app.get('/x', (request, response) => {
-  response.send('Hello from Express!');
-});
-
 app.listen(port, (err) => {
   if (err) {
     return console.log('something bad happened!', err)

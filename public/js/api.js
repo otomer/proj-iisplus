@@ -4,13 +4,13 @@ var API = {
     dbInfo: {
         dbuser: "admin",
         dbpassword: "admin",
-        url: "mongodb://<dbuser>:<dbpassword>@ds046549.mlab.com:46549/chromeext",
+        url: "mongodb://<dbuser>:<dbpassword>@ds157248.mlab.com:57248/extdb",
         getConnectionString: function() {
             return this.url.replace("<dbuser>", this.dbuser).replace("<dbpassword>", this.dbpassword);
         }
     },
     API_KEY: "kH7vhCSdc9IeGZnAXwjm02DwxDqmA1O-",
-    DB_NAME: "chromeext",
+    DB_NAME: "extdb",
     BASE_URL: "https://api.mlab.com/api/1/",
 
     url: function (path) {
