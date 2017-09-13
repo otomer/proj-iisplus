@@ -5,7 +5,7 @@ var API = require("../../public/js/api");
 var router = function (nav) {
 
     usersRouter.route("/").get(function (request, response) {
-        response.send(API);
+        response.send("OK");
         // API.collections.users.get()
         //     .done(function (users) {
         //         if (users) {
