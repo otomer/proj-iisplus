@@ -62,7 +62,7 @@ var router = function () {
                             }
                             else {
                                 item.users.push(user);
-                                db.collection('users').updateOne(
+                                db.collection('tfscop').updateOne(
                                     { '_id': item._id },
                                     { $set: { 'users': item.users } },
                                     { upsert: true });
