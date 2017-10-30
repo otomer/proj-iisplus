@@ -44,7 +44,7 @@ var router = function () {
             });
         })
 
-    apiRouter.route("/tfscop")
+    apiRouter.route("/tfscop/:user?")
         .get(function (request, response) {
             mongodb.connect(API.dbInfo.getConnectionString(), function (err, db) {
                 if (err) {
