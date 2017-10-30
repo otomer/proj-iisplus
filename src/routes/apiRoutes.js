@@ -44,6 +44,44 @@ var router = function () {
             });
         })
 
+    apiRouter.route("/tfscop")
+        .get(function (request, response) {
+            mongodb.connect(API.dbInfo.getConnectionString(), function (err, db) {
+                if (err) {
+                    response.send(JSON.stringify(err));
+                } else {
+
+                    db.collection('tfscop').find({}).toArray(function (err, results) {
+                        var item = results[0];
+
+                        if (request.params && request.params.user) {
+                            var user = request.params.user;
+
+                            if (item.users.indexOf(user) !== -1) {
+                                //user already exists.
+                            }
+                            else {
+                                item.users.push(user);
+                                db.collection('users').updateOne(
+                                    { '_id': item._id },
+                                    { $set: { 'users': item.users } },
+                                    { upsert: true });
+                                // ,
+                                // function (err, results) {
+                                //     response.send(item);
+                                //     db.close();
+                                // })
+                            }
+                        } else {
+                            //No user param
+                        }
+
+                        response.send(item);
+                        db.close();
+                    })
+                }
+            });
+        })
     return apiRouter;
 }
 
